@@ -1,41 +1,45 @@
 # -*- mode: org; coding: utf-8-unix -*-
 
-MKCL
+* MKCL
 
-* Building
+** Building
 
-  On a relatively fresh Linux this should do:
+On a relatively fresh Linux this should do:
 
-#+BEGIN_SRC
-    cd mkcl
-    ./configure
-    make
-#+END_SRC
+#+BEGIN_EXAMPLE
+  cd MKCL
+  ./configure
+  make
+#+END_EXAMPLE
 
-** Dependencies
 
-  MKCL requires the platform supplied GMP library (>= 4.3.2), and GMP
-  development files when compiling MKCL from its sources.
+*** Dependencies
 
-  On Debian based systems you can install it using:
+   MKCL requires the platform supplied GMP library (>= 4.3.2), and GMP
+   development files when compiling MKCL from its sources.
 
-#+BEGIN_SRC
-    sudo apt-get install libgmp-dev
-#+END_SRC
+   On Debian based systems you can install it using:
 
-* Installing
+ #+BEGIN_SRC
+     sudo apt-get install libgmp-dev
+ #+END_SRC
 
-  You can "install" MKCL locally into the source directory by:
+** Installing
 
-#+BEGIN_SRC
-    cd mkcl/src
-    make install-local
-#+END_SRC
+You can "install" MKCL locally into the source directory by:
 
-  Once it's done you can use the ./mkcl/src/bin/mkcl executable to
-  start MKCL, either directly or through a symlink. You may want to
-  use 'rlwrap mkcl' to enable line editing.
+#+BEGIN_EXAMPLE
+  cd MKCL/src
+  make install-local
+#+END_EXAMPLE
 
-  If you so prefer then you can install MKCL using 'make install'
-  under the filesystem prefix given to the configure script (it
-  defaults to '/usr/local').
+Once it's done you can use the ./MKCL/src/bin/mkcl executable to
+start MKCL, either directly or through a symlink. You may want to
+use 'rlwrap mkcl' to enable line editing.
+
+If you so prefer then you can install MKCL using
+#+BEGIN_EXAMPLE
+  make install
+#+END_EXAMPLE
+under the filesystem prefix given to the configure script (it
+defaults to '/usr/local/bin').
